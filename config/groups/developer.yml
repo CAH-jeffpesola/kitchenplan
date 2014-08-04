@@ -1,0 +1,12 @@
+language: objective-c
+
+cache: bundler
+
+rvm:
+  - 2.0.0
+
+script:
+    - bundle exec rake install
+    - kitchenplan setup https://github.com/kitchenplan/kitchenplan-config-test.git
+    - kitchenplan provision
+#    - sudo rake test
